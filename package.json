@@ -1,7 +1,7 @@
 {
   "name": "tilskudd-logs-stats",
   "description": "Statistics from the tilskudd logs",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "private": true,
   "author": {
@@ -21,7 +21,7 @@
     "standard-fix": "standard --fix",
     "start": "micro",
     "dev": "micro-dev",
-    "now-deploy": "npm test && now --npm -E production.env && now alias"
+    "now-deploy": "npm test && now --npm && now alias"
   },
   "keywords": [
     "microservice",
@@ -43,7 +43,8 @@
     "alias": [
       "stats.logs.tilskudd.mikrotjenester.win"
     ],
-    "type": "npm"
+    "type": "npm",
+    "dotenv": "production.env"
   },
   "devDependencies": {
     "ava": "0.22.0",
