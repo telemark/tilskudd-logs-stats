@@ -16,6 +16,10 @@ Get stats for total of logs
 
 Get number of logs in queue
 
+### ```GET /stats/categories```
+
+Get number of applications grouped by categories
+
 ## License
 
 [MIT](LICENSE)
