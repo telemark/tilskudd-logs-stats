@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "markdown-it": "8.4.0",
-    "micro": "9.0.0",
+    "micro": "9.0.1",
     "mongojs": "2.4.1",
     "winston": "2.4.0",
     "winston-papertrail": "1.0.5"
