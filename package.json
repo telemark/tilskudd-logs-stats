@@ -1,7 +1,7 @@
 {
   "name": "tilskudd-logs-stats",
   "description": "Statistics from the tilskudd logs",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "private": true,
   "author": {
