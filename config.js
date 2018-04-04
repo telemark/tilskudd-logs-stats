@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
   DB: process.env.DB || 'mongodb://localhost/tilskudd',
   PAPERTRAIL_HOSTNAME: process.env.PAPERTRAIL_HOSTNAME || 'tilskudd',

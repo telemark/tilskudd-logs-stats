@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.9.3"
+    "node": ">=8.11.1"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -21,7 +21,8 @@
     "standard-fix": "standard --fix",
     "start": "micro",
     "dev": "micro-dev",
-    "deploy": "npm test && now --npm && now alias"
+    "deploy": "npm test && now --npm && now alias",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [
     "microservice",
@@ -33,7 +34,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/telemark/tilskudd-logs-stats.git"
+    "url": "git+https://github.com/telemark/tilskudd-logs-stats.git"
   },
   "bugs": {
     "url": "https://github.com/telemark/tilskudd-logs-stats/issues"
@@ -46,7 +47,7 @@
     "type": "npm",
     "dotenv": "production.env",
     "engines": {
-      "node": "8.9.3"
+      "node": "8.11.1"
     }
   },
   "devDependencies": {
