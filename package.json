@@ -61,7 +61,7 @@
     "test-listen": "1.1.0"
   },
   "dependencies": {
-    "markdown-it": "8.4.1",
+    "markdown-it": "8.4.2",
     "micro": "9.3.2",
     "mongojs": "2.6.0",
     "winston": "2.4.3",
