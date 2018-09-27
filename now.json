@@ -1,0 +1,11 @@
+{
+  "name": "tilskudd-logs-stats",
+  "alias": [
+    "stats.logs.tilskudd.mikrotjenester.win"
+  ],
+  "type": "docker",
+  "dotenv": "production.env",
+  "features": {
+    "cloud": "v2"
+  }
+}

@@ -1,4 +1,4 @@
-const readFileSync = require('fs').readFileSync
+const { readFile } = require('fs').promises
 const md = require('markdown-it')()
 const { send } = require('micro')
 const resolveRequest = require('./lib/resolve-request')
@@ -15,7 +15,7 @@ module.exports = async (request, response) => {
       send(response, 200, result)
     } else {
       logger('info', ['index', 'frontpage'])
-      const readme = readFileSync('./README.md', 'utf-8')
+      const readme = await readFile('README.md', 'utf-8')
       send(response, 200, md.render(readme))
     }
   } catch (error) {
