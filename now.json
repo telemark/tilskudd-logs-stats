@@ -5,6 +5,15 @@
   "alias": [
     "stats.logs.tilskudd.t-fk.no"
   ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGODB_CONNECTION": "@tilskudd-stats-db",
+    "MONGODB_COLLECTION": "logs",
+    "MONGODB_NAME": "tilskudd2019",
+    "PAPERTRAIL_HOSTNAME": "tilskudd",
+    "PAPERTRAIL_HOST": "@tfk-papertrail-host",
+    "PAPERTRAIL_PORT": "@tfk-papertrail-port"
+  },
   "builds": [
     {
       "src": "/README.md",
