@@ -1,11 +1,59 @@
 {
+  "version": 2,
   "name": "tilskudd-logs-stats",
+  "scope": "telemark",
   "alias": [
-    "stats.logs.tilskudd.mikrotjenester.win"
+    "stats.logs.tilskudd.t-fk.no"
   ],
-  "type": "docker",
-  "dotenv": "production.env",
-  "features": {
-    "cloud": "v2"
-  }
+  "builds": [
+    {
+      "src": "/README.md",
+      "use": "@now/md"
+    },
+    {
+      "src": "/api/*",
+      "use": "@now/node"
+    },
+    {
+      "src": "/index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/README.html"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/static/favicon.ico"
+    },
+    {
+      "src": "/stats/total",
+      "dest": "/api/total.js",
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/queue",
+      "dest": "/api/queue.js",
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/categories",
+      "dest": "/api/categories.js",
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    }
+  ]
 }
