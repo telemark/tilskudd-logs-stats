@@ -7,9 +7,9 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "MONGODB_CONNECTION": "@tilskudd-stats-db",
-    "MONGODB_COLLECTION": "logs",
-    "MONGODB_NAME": "tilskudd2019",
+    "MONGODB_CONNECTION": "@db-tfkcosmos-read",
+    "MONGODB_COLLECTION": "tilskudd201902",
+    "MONGODB_NAME": "felles",
     "PAPERTRAIL_HOSTNAME": "tilskudd",
     "PAPERTRAIL_HOST": "@tfk-papertrail-host",
     "PAPERTRAIL_PORT": "@tfk-papertrail-port"
