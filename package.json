@@ -46,7 +46,7 @@
     "standard": "12.0.1"
   },
   "dependencies": {
-    "mongodb": "3.2.4",
+    "mongodb": "3.2.5",
     "winston": "2.4.4",
     "winston-papertrail": "1.0.5"
   }
