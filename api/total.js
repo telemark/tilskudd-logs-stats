@@ -10,10 +10,10 @@ module.exports = async (request, response) => {
   try {
     const count = await logs.countDocuments({})
     logger('info', ['total', 'success', count])
-    response.end(JSON.stringify({ total: count }))
+    response.json({ total: count })
   } catch (error) {
     logger('error', ['total', error])
-    response.writeHead(500)
-    response.end(error.toString())
+    response.status(500)
+    response.send(error.toString())
   }
 }

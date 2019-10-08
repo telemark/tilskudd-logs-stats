@@ -10,10 +10,10 @@ module.exports = async (request, response) => {
   try {
     const count = await logs.countDocuments({ isQueued: true })
     logger('info', ['queue', 'success', count])
-    response.end(JSON.stringify({ queue: count }))
+    response.json({ queue: count })
   } catch (error) {
     logger('error', ['queue', error])
-    response.writeHead(500)
-    response.end(error.toString())
+    response.status(500)
+    response.send(error.toString())
   }
 }

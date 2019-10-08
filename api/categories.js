@@ -10,10 +10,10 @@ module.exports = async (request, response) => {
   try {
     const results = await logs.aggregate([{ $match: {} }, { $group: { _id: '$artform.artform', total: { $sum: 1 } } }]).sort({ total: -1 }).toArray()
     logger('info', ['categories', 'success', results.length])
-    response.end(JSON.stringify(results))
+    response.json(results)
   } catch (error) {
     logger('error', ['categories', error])
-    response.writeHead(500)
-    response.end(error.toString())
+    response.status(500)
+    response.send(error.toString())
   }
 }
