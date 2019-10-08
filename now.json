@@ -7,9 +7,9 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "MONGODB_CONNECTION": "@db-tfkcosmos-read",
-    "MONGODB_COLLECTION": "tilskudd201902",
-    "MONGODB_NAME": "felles",
+    "MONGODB_CONNECTION": "@db-cosmos-prod-connection-read",
+    "MONGODB_COLLECTION": "@db-cosmos-prod-connection-tilskudd-name",
+    "MONGODB_NAME": "@db-cosmos-prod-shared-name",
     "PAPERTRAIL_HOSTNAME": "tilskudd",
     "PAPERTRAIL_HOST": "@tfk-papertrail-host",
     "PAPERTRAIL_PORT": "@tfk-papertrail-port"
