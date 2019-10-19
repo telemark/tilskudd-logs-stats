@@ -8,7 +8,7 @@ module.exports = async (request, response) => {
   const logs = db.collection(process.env.MONGODB_COLLECTION)
   logger('info', ['categories', 'start'])
   try {
-    const results = await logs.aggregate([{ $match: {} }, { $group: { _id: '$artform.artform', total: { $sum: 1 } } }]).sort({ total: -1 }).toArray()
+    const results = await logs.aggregate([{ $match: {} }, { $group: { _id: '$formal.formal', total: { $sum: 1 } } }]).sort({ total: -1 }).toArray()
     logger('info', ['categories', 'success', results.length])
     response.json(results)
   } catch (error) {
