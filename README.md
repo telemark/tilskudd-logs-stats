@@ -19,6 +19,36 @@ Get number of logs in queue
 
 Get number of applications grouped by categories
 
+## Development
+
+Add a local `.env`
+
+```
+NODE_ENV=development
+MONGODB_CONNECTION=mongodb-connection-string
+MONGODB_COLLECTION=mongodb-collection-name
+MONGODB_NAME=mongodb-db-name
+PAPERTRAIL_HOSTNAME=tilskudd
+PAPERTRAIL_HOST=logs.papertrailapp.com
+PAPERTRAIL_PORT=12345
+```
+
+Start the development server
+
+```
+$ npm run dev
+```
+
+## Deploy
+
+Check the settings in [now.json](now.json)
+
+Run the deployment script
+
+```
+$ npm run deploy
+```
+
 ## License
 
 [MIT](LICENSE)
